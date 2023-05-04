@@ -75,7 +75,7 @@ const AllRecipe = () => {
                       </div>
                     </div>
 
-                    <Link to={`/ViewDetails/${chef.id}/${recipe.id}`}>
+                    <Link to="/">
                       <button type="button" className="btn btn-info" id="view">
                         View Recipe
                       </button>

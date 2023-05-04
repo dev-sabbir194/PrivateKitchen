@@ -74,12 +74,6 @@ const Recipe = () => {
                         <FontAwesomeIcon icon={faHeart} />
                       </div>
                     </div>
-
-                    {/* <Link to={`/ViewDetails/${chef.id}/${recipe.id}`}>
-                      <button type="button" className="btn btn-info" id="view">
-                        View Recipe
-                      </button>
-                    </Link> */}
                   </div>
                 </div>
               </div>

@@ -74,7 +74,7 @@ const Chef = () => {
                       <img src={card.dolarIcon} alt="" /> {card.salary}
                     </p>
                   </div>
-                  <Link to={`/ViewDetails/${card.id}`}>
+                  <Link to="/allrecipes">
                     <button type="button" className="btn btn-info" id="view">
                       View Recipes
                     </button>

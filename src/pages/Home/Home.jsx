@@ -5,8 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
-
-
 const Home = () => {
   const [numOfCardsToShow, setNumOfCardsToShow] = useState(6);
   const [filteredJobData, setFilteredJobData] = useState([]);
@@ -31,11 +29,6 @@ const Home = () => {
   const showMoreCards = () => {
     setNumOfCardsToShow(12);
   };
-
-
-
-
-
 
   const handleLikeClick = (chefId) => {
     fetch(
@@ -63,8 +56,6 @@ const Home = () => {
       });
   };
 
-
-  
   return (
     <div className="home-body">
       <div className="container mb-5">
@@ -93,7 +84,7 @@ const Home = () => {
                   <div className="d-flex justify-content-between">
                     <h4>
                       Experience: <span>{card.yearsOfExperience}</span>
-                       <span className="ms-2">Years</span>
+                      <span className="ms-2">Years</span>
                     </h4>
                     <h4>
                       Recipes: <span>{card.numberOfRecipes}</span>
@@ -104,9 +95,8 @@ const Home = () => {
                       <FontAwesomeIcon icon={faHeart} />
                       <span className="ms-3">{card.likes}</span>
                     </p>
-                  
                   </div>
-                  <Link to={`/recipe/${card.id}`}>
+                  <Link to="/allrecipes">
                     <button type="button" className="btn btn-info" id="view">
                       View Recipes
                     </button>
