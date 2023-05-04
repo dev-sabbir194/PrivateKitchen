@@ -1,0 +1,24 @@
+.detail{
+    margin-left: 5px;
+}
+.link-title{
+    color: #ffffff;
+}
+.adress{
+    color: #ffffff;
+}
+
+ .detail a {
+    text-decoration: none;
+    color: #ffffff;
+ }
+ .detail a:hover{
+    color: #838587;
+ }
+ #hr{
+    color: #ffffff;
+    margin-top: 20px;
+ }
+ .copyright{
+    color: #ffffff;
+ }
