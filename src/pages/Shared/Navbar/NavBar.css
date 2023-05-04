@@ -1,0 +1,47 @@
+#button {
+  background: linear-gradient(90deg, #7e90fe 0%, #9873ff 100%);
+  border-radius: 8px;
+  width: 170px;
+  height: 40px;
+  font-weight: 800;
+  color: #ffffff;
+}
+#navbar-brand {
+  font-weight: 800;
+  font-size: 50px;
+  color: #38f9ef;
+}
+
+.nav-item a {
+  font-weight: 500;
+  color: #ffffff;
+}
+.nav-item a:hover {
+  color: #9873ff;
+}
+
+/* #linkaling{
+    margin-left: 50vh;
+} */
+
+#navLink {
+  color: #ffffff;
+}
+
+#logout {
+  border: 2px solid #894242;
+  border-radius: 5px;
+  background: #833ab4; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fcb045,
+    #fd1d1d,
+    #833ab4
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+
+  font-weight: 500;
+  color: #ffffff;
+  padding-left: 20px;
+  padding-right: 20px;
+}
