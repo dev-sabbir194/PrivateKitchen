@@ -1,0 +1,31 @@
+#title {
+    font-weight: 800;
+    color: #1A1919;
+}
+
+#description {
+    font-weight: 500;
+}
+
+.skill {
+    background-color: #060606;
+    border-radius: 10px;
+    font-weight: 500;
+    width: 265px;
+    height: 220px;
+
+}
+
+.skill:hover {
+    background-color: #3d3d3d;
+}
+
+.job-title{
+    color: #474747;
+    font-weight: 800;
+}
+
+.job-description{
+    color: #A3A3A3;
+    font-weight: 500;
+}
