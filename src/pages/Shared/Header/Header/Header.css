@@ -1,0 +1,22 @@
+.banner-title{
+    font-weight: 800;
+    font-size: 70px;
+
+}
+#drem{
+    color: #9873FF;
+}
+
+#strat-button{
+    background-color:#9873FF;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.banner-discription{
+    font-weight: 500;
+}
+
+.heder-img{
+    border-radius: 25%;
+}
