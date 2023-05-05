@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./AllRecipe.css";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -12,7 +12,7 @@ const AllRecipe = () => {
   useEffect(() => {
     fetch("https://assignment-10-server-dev-sabbir194.vercel.app/recipe")
       .then((response) => response.json())
-      .then((data) => setRecipes(data.allRecipe))
+      .then((data) => setRecipes(data))
       .catch((error) => console.log(error));
   }, []);
 
@@ -33,8 +33,8 @@ const AllRecipe = () => {
           grab your apron and let's get cooking!
         </p>
         <div className="row">
-          {recipes.map((chef) =>
-            chef.recipes.map((recipe) => (
+          {recipes.map((recipeObj) =>
+            recipeObj.recipes.map((recipe) => (
               <div
                 className="col-lg-6 col-md-6 col-sm-12 mt-4 mt-2"
                 key={recipe.id}
@@ -55,8 +55,10 @@ const AllRecipe = () => {
 
                     <ul>
                       <h3 className="ulH">Ingredient:</h3>
-                      {recipe.ingredients.map((ingredient) => (
-                        <li className="ingred">{ingredient}</li>
+                      {recipe.ingredients.map((ingredient, index) => (
+                        <li className="ingred" key={index}>
+                          {ingredient}
+                        </li>
                       ))}
                     </ul>
                     <div className="d-flex justify-content-between align-items-center mt-2">
@@ -75,7 +77,7 @@ const AllRecipe = () => {
                       </div>
                     </div>
 
-                    <Link to="/">
+                    <Link to={`/recipe/${recipeObj.id}`}>
                       <button type="button" className="btn btn-info" id="view">
                         View Recipe
                       </button>

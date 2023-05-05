@@ -85,7 +85,7 @@ const OurChefGoals = () => {
               alt=""
             />
             <h4>Meet Our Chefs</h4>
-            <p className="text-muted mb-4">Meet Our Chefs Experienced Chef</p>
+            <p className="text-muted mb-4">Meet Our Experienced Chef</p>
             <Link to="/chef">
               <button type="button" className="btn btn-info" id="view">
                 Meet Our Chefs

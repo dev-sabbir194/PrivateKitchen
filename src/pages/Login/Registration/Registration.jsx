@@ -40,41 +40,42 @@ const Registration = () => {
 
 
 
-  
+  const handleRegistration = async (e) => {
+    e.preventDefault();
 
-const handleRegistration = async (e) => {
-  e.preventDefault();
-
-  if (password.length < 6) {
-    setError("Password should be at least 6 characters");
-    toast.error("Password should be at least 6 characters");
-    return;
-  }
-
-  try {
-    const userCredential = await createUserWithEmailAndPassword(
-      auth,
-      email,
-      password
-    );
-
-    // Save email and password to localStorage
-    localStorage.setItem("email", email);
-    localStorage.setItem("password", password);
-    localStorage.setItem("photoUrl", photoURL);
-
-    toast.success("Registration successful!");
-    window.location.replace("/home");
-  } catch (error) {
-    if (error.code === "auth/email-already-in-use") {
-      setError("Email already in use. Please use a different email.");
-      toast.error("Email already in use. Please use a different email.");
-    } else {
-      setError(error.message);
-      toast.error(error.message);
+    if (password.length < 6) {
+      setError("Password should be at least 6 characters");
+      toast.error("Password should be at least 6 characters");
+      return;
     }
-  }
-};
+
+    try {
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+
+      // Remove previous photo URL from local storage
+      localStorage.removeItem("photoUrl");
+
+      // Save email, password, and photo URL to local storage
+      localStorage.setItem("email", email);
+      localStorage.setItem("password", password);
+      localStorage.setItem("photoUrl", photoURL);
+
+      toast.success("Registration successful!");
+      window.location.replace("/home");
+    } catch (error) {
+      if (error.code === "auth/email-already-in-use") {
+        setError("Email already in use. Please use a different email.");
+        toast.error("Email already in use. Please use a different email.");
+      } else {
+        setError(error.message);
+        toast.error(error.message);
+      }
+    }
+  };
 
 
 

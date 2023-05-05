@@ -21,6 +21,12 @@ const NavBar = () => {
     event.target.title = user.email;
   };
 
+
+   const handleLogout = () => {
+     auth.signOut();
+     localStorage.removeItem("photoUrl"); // remove photo URL from local storage
+   };
+
   return (
     <div>
       <div className="container-fluid">
